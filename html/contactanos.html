@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/contactanos.css">
+    <title>Formulario de contacto</title>
+</head>
+<body>
+    <section class="form-register">
+        <h4><center>Formulario de contacto</center></h4>
+        <form id="contact-form" onsubmit="registerusuario(); return false;" action="/validar" method="post">
+            <div>
+                <label for="tipo-documento">Tipo de documento:</label>
+                <select class="controls" name="tipo-documento" id="tipo-documento" required>
+                    <option value="">Selecciona un tipo</option>
+                    <option value="DNI">DNI</option>
+                    <option value="Carnet de extranjería">Carnet de extranjería</option>
+                </select>
+                <div id="error-tipo-documento" class="error-message"></div>
+            </div>
+            <div>
+                <input class="controls" type="text" name="numero-documento" id="numero-documento" placeholder="Número de documento" required>
+                <div id="error-numero-documento" class="error-message"></div>
+            </div>
+            <div>
+                <input class="controls" name="nombres" id="nombres" placeholder="Nombre del estudiante" required>
+                <div id="error-nombres" class="error-message"></div>
+            </div>
+            <div>
+                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellido del estudiante" required>
+                <div id="error-apellidos" class="error-message"></div>
+            </div>
+            <div>
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input class="controls" type="date" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Fecha de nacimiento" required>
+                <div id="error-fecha_nacimiento" class="error-message"></div>
+            </div>
+            <div>
+                <label for="grado">Grado:</label>
+                <select class="controls" name="grado" id="grado" required>
+                    <option value="">Selecciona un grado</option>
+                    <option value="Inicial">Inicial, 3 años</option>
+                    <option value="Inicial">Inicial, 4 años</option>
+                    <option value="Inicial">Inicial, 5 años</option>
+                    <option value="Primaria">Primaria, 1er grado</option>
+                    <option value="Primaria">Primaria, 2do grado</option>
+                    <option value="Primaria">Primaria, 3er grado</option>
+                    <option value="Primaria">Primaria, 4to grado</option>
+                    <option value="Primaria">Primaria, 5to grado</option>
+                    <option value="Primaria">Primaria, 6to grado</option>
+                </select>
+                <div id="error-grado" class="error-message"></div>
+            </div>
+            <div>
+                <label for="sexo">Sexo:</label>
+                <select class="controls" name="sexo" id="sexo" required>
+                    <option value="">Selecciona tu sexo</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                </select>
+                <div id="error-sexo" class="error-message"></div>
+            </div>  
+            <div>
+                <input class="controls" type="text" name="apoderado" id="apoderado" placeholder="apoderado">
+                <div id="error-apoderado" class="error-message"></div>
+            </div>
+            <div>
+                <input class="controls" type="tel" id="telefono" placeholder="Celular del apoderado" required>
+                <div id="error-telefono" class="error-message"></div>
+            </div>
+            <div>
+                <input class="controls" type="email" name="email" id="email" placeholder="Correo electrónico" required>
+                <div id="error-email" class="error-message"></div>
+            </div>
+            <div>
+                <input class="controls" type="text" name="direccion" id="direccion" placeholder="Dirección" required>
+                <div id="error-direccion" class="error-message"></div>
+            </div>
+            <div>
+                <input class="controls" type="text" name="sugerencia" id="sugerencia" placeholder="Consulta, Queja o Sugerencia" required>
+                <div id="error-sugerencia" class="error-message"></div>
+            </div>
+            
+            <input class="botons" type="submit" value="Enviar">
+        </form>
+    </section>
+    <script src="/contactanos.js"></script>
+</body>
+</html>
